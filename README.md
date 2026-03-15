@@ -91,13 +91,8 @@ This project is maintained by **Pezhman Farhangi**.
 
 **Brand / rights holder name for notices:** Pezhman Farhangi
 
-Replace the following placeholder if you want to identify your OS or product by name throughout this file:
-
-O
-
-Example:
-
-> “Project O source code is licensed under Apache-2.0, while trademarks, logos, and protected visual assets are reserved.”
+**O**
+**Project O source code is licensed under Apache-2.0, while trademarks, logos, and protected visual assets are reserved.**
 
 
 ## 9) Legal Notice
