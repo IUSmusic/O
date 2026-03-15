@@ -95,12 +95,3 @@ This project is maintained by **Pezhman Farhangi**.
 **Project O source code is licensed under Apache-2.0, while trademarks, logos, and protected visual assets are reserved.**
 
 
-## 9) Legal Notice
-
-This document is a practical repository notice for GitHub and does not replace legal advice.
-
-For stronger protection of your UI and product identity, consider registering:
-
-- trademarks for names and logos
-- copyright in creative assets
-- design rights or design patents where available
