@@ -3,7 +3,7 @@
 **Live demo**  
 * https://iusmusic.github.io/O
 
-# O OS
+# O (OS)
 
 **O is a full independent operating system with a protected Mother O core, sandboxed Sub O environments, machine-native internal languages for software, graphics, and music, a visible privacy/security model, signed and rollback-safe system evolution, repo-driven device support, and optional external hardware expansion for AI, audio, display, and compute.**
 
