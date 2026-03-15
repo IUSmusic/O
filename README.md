@@ -57,7 +57,90 @@ o-os/
 
 This package is a design baseline, not a final implementation.
 
+# O OS
 
+O OS is a modular operating system concept built around a central system layer, **Mother O**, and extensible environments called **Sub O**.
+
+This repository contains the core specification package for the platform, including architecture, security, UI direction, device strategy, roadmap planning, and starter modules for media, graphics, and device bring-up.
+
+## What this repository includes
+
+- vision and architecture documents
+- Mother O and Sub O specifications
+- security model and privacy direction
+- UI and interaction guidance
+- device strategy and roadmap docs
+- starter specs for:
+  - **O-IR**
+  - **O-GFX**
+  - **O-MUS**
+- Pixel 8 bring-up starter documentation
+- Sub O manifest JSON schema
+
+## Core concept
+
+### Mother O
+Mother O is the main system surface and orchestration layer. It is responsible for the core OS experience, system control, coordination, and shared platform services.
+
+### Sub O
+Sub O environments are modular worlds or focused runtime spaces that extend the system for specific use cases. This model is intended to support specialized workflows without turning the main system into a monolithic interface.
+
+## Current scope
+
+This repository is primarily a **specification and planning package**. It is intended to define:
+
+- platform vision
+- architectural direction
+- subsystem boundaries
+- security expectations
+- UI principles
+- implementation starting points
+
+It is not positioned as a complete production OS release.
+
+## Featured starter modules
+
+### O-IR
+Starter specification for infrared or low-level system-facing functionality.
+
+### O-GFX
+Starter specification for graphics-related services, rendering, or visual pipeline work.
+
+### O-MUS
+Starter specification for music, audio, or media-focused system capabilities.
+
+## Device target
+
+The package includes a **Pixel 8 bring-up starter path**, providing an early hardware reference target for bootstrapping and testing platform assumptions.
+
+## Schema support
+
+A **Sub O manifest JSON schema** is included to define how modular environments are described, declared, and validated.
+
+## Who this is for
+
+This repository is useful for:
+
+- system architects
+- OS designers
+- platform engineers
+- UI and interaction designers
+- security reviewers
+- collaborators evaluating the Mother O / Sub O model
+
+## Repository goal
+
+The goal of this repository is to provide a clear and structured foundation for building O OS as a modular, design-driven, and security-conscious operating system platform.
+
+## Status
+
+Early-stage specification repository.
+
+Interfaces, architecture details, and implementation plans are expected to evolve as the platform matures.
+
+## Maintainer
+
+**Pezhman Farhangi**
 
 # Open Source License, Trademark, and Design Notice
 
