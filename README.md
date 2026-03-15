@@ -3,7 +3,7 @@
 
 # O OS
 
-O is a full independent operating system with a protected Mother O core, sandboxed Sub O environments, machine-native internal languages for software, graphics, and music, a visible privacy and security model, signed and rollback-safe system evolution, repo-driven device support, and optional external hardware expansion.
+**O is a full independent operating system with a protected Mother O core, sandboxed Sub O environments, machine-native internal languages for software, graphics, and music, a visible privacy/security model, signed and rollback-safe system evolution, repo-driven device support, and optional external hardware expansion for AI, audio, display, and compute.**
 
 This repository skeleton is a professional, GitHub-ready starting point for the O OS architecture and implementation plan.
 
