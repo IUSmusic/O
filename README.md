@@ -1,7 +1,7 @@
 ![OPreview](OPREVIEW.png)
 
 **Live demo**  
-* (https://iusmusic.github.io/IUS-DMS/)
+* https://iusmusic.github.io/O
 
 # O OS
 
