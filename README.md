@@ -236,6 +236,6 @@ This project is maintained by **Pezhman Farhangi**.
 **Brand / rights holder name for notices:** Pezhman Farhangi
 
 **O**
-**Project O source code is licensed under Apache-2.0, while trademarks, logos, and protected visual assets are reserved.**
+**Project O source code is licensed under Apache-2.0, while trademarks, UI, Name, identifiers, logos, and protected visual assets are reserved.**
 
 
