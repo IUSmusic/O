@@ -1,3 +1,60 @@
+
+# O OS
+
+O is a full independent operating system with a protected Mother O core, sandboxed Sub O environments, machine-native internal languages for software, graphics, and music, a visible privacy and security model, signed and rollback-safe system evolution, repo-driven device support, and optional external hardware expansion.
+
+This repository skeleton is a professional, GitHub-ready starting point for the O OS architecture and implementation plan.
+
+## Repository map
+
+```text
+o-os/
+├── README.md
+├── docs/
+│   ├── vision.md
+│   ├── architecture.md
+│   ├── mother-o.md
+│   ├── sub-o.md
+│   ├── security.md
+│   ├── ui.md
+│   ├── device-strategy.md
+│   └── roadmap.md
+├── specs/
+│   ├── o-ir-v0.1.md
+│   ├── o-gfx-v0.1.md
+│   ├── o-mus-v0.1.md
+│   └── external-accelerators.md
+├── devices/
+│   └── pixel8/
+│       ├── README.md
+│       ├── bringup-plan.md
+│       └── feature-matrix.md
+└── schemas/
+    └── sub-o-manifest.schema.json
+```
+
+## Core principles
+
+- Mother O is protected and mostly immutable in logic.
+- Sub O is the safe place for experimentation, live coding, and development.
+- O uses machine-native internal languages: O-IR, O-GFX, and O-MUS.
+- Local-first AI is the default; online AI is brokered and optional.
+- Every meaningful action should be visible, reversible, and policy-governed.
+- Device support is repo-driven and starts with a single proof-of-concept target.
+
+## Initial target
+
+- Reference device: Pixel 8-class unlocked retail phone
+- First phase: phone proof of concept
+- Second phase: tablet and PC variants
+- Third phase: purpose-built hardware
+
+## Status
+
+This package is a design baseline, not a final implementation.
+
+
+
 # Open Source License, Trademark, and Design Notice
 
 **Copyright © 2026 Pezhman Farhangi. All rights reserved except as expressly licensed below.**
