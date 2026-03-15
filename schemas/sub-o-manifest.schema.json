@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sub O Manifest",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "template",
+    "agent_mode",
+    "network_mode"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "template": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "agent_mode": {
+      "type": "string",
+      "enum": [
+        "local_only",
+        "online_brokered",
+        "hybrid",
+        "manual_only"
+      ]
+    },
+    "network_mode": {
+      "type": "string",
+      "enum": [
+        "offline",
+        "broker_only",
+        "allowlist",
+        "lan_only",
+        "full"
+      ]
+    },
+    "runtime_class": {
+      "type": "string",
+      "enum": [
+        "native",
+        "compat",
+        "vm"
+      ]
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "devices": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "promotion_eligible": {
+      "type": "boolean"
+    },
+    "snapshot_policy": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "periodic",
+        "on_change",
+        "disabled"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
