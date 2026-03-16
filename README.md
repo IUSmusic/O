@@ -1,4 +1,4 @@
-![OPreview](OPREVIEW.png)
+![OPreview](OMAIN.png)
 
 **Live demo**  
 * https://iusmusic.github.io/O
