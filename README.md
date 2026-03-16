@@ -5,7 +5,7 @@
 
 # O (OS)
 
-**O is a full independent operating system with a protected Mother O core, sandboxed Sub O environments, machine-native internal languages for software, graphics, and music, a visible privacy/security model, signed and rollback-safe system evolution, repo-driven device support, and optional external hardware expansion for AI, audio, display, and compute.**
+**O is an independent smartphone and tablet operating system designed for people who want to build, modify, and control software directly on their device. It combines a protected Mother O core, sandboxed Sub O environments, local-first AI assistance, and machine-native internal languages to make coding, experimentation, and system customization safer and more powerful.**
 
 
 ## Core principles
