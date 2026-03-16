@@ -108,19 +108,19 @@
           </section>
         </main>
 
-        <!-- 3D FLOATING BUTTON — untouched, linked to main.js -->
+        <!-- MAIN BUTTON — sun canvas -->
         <button class="floating-main-button" id="mainButton" aria-label="Main button">
           <div class="main-button-inner">
-            <div class="main-button-glb-slot model-slot" id="mainButtonGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
+            <canvas id="sunButtonCanvas" aria-hidden="true"></canvas>
           </div>
         </button>
 
-        <!-- SYSTEM OVERLAY — untouched, linked to main.js -->
+        <!-- SYSTEM OVERLAY -->
         <section class="system-overlay" id="systemOverlay" aria-hidden="true">
           <div class="system-overlay-panel">
             <button class="overlay-close-button" id="overlayCloseButton" aria-label="Return to home">O</button>
             <div class="overlay-centerpiece">
-              <div class="overlay-glb-slot model-slot overlay-model-slot" id="overlayGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
+              <canvas id="sunOverlayCanvas" aria-hidden="true"></canvas>
             </div>
           </div>
         </section>
@@ -129,6 +129,6 @@
     </div>
   </div>
 
-  <script type="module" src="./js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
