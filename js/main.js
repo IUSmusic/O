@@ -15,11 +15,33 @@ function closeOverlay() {
   overlay?.setAttribute("aria-hidden", "true");
   screenRoot?.classList.remove("screen-overlay-open");
 }
+
 pullZone?.addEventListener("click", openOverlay);
 mainButton?.addEventListener("click", openOverlay);
 closeButton?.addEventListener("click", closeOverlay);
 overlay?.addEventListener("click", (e) => { if (e.target === overlay) closeOverlay(); });
-window.addEventListener("keydown", (e) => { if (e.key === "Escape") closeOverlay(); });
+window.addEventListener("keydown", (e) => { if (e.key === "Escape") { closeOverlay(); closeTerminalOverlay(); } });
+
+// ── Terminal overlay open / close ─────────────────────────────────────────────
+const terminalOverlay     = document.getElementById("terminalOverlay");
+const terminalToggle      = document.getElementById("terminalToggle");
+const terminalOverlayClose = document.getElementById("terminalOverlayClose");
+
+function openTerminalOverlay() {
+  terminalOverlay?.classList.add("is-open");
+  terminalOverlay?.setAttribute("aria-hidden", "false");
+  // scroll log to bottom
+  const body = document.getElementById("tovBody");
+  if (body) body.scrollTop = body.scrollHeight;
+}
+function closeTerminalOverlay() {
+  terminalOverlay?.classList.remove("is-open");
+  terminalOverlay?.setAttribute("aria-hidden", "true");
+}
+
+terminalToggle?.addEventListener("click", openTerminalOverlay);
+terminalToggle?.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") openTerminalOverlay(); });
+terminalOverlayClose?.addEventListener("click", closeTerminalOverlay);
 
 // ── Perlin noise helpers ───────────────────────────────────────────────────────
 const PERM = new Uint8Array(512);
@@ -63,16 +85,13 @@ class SunCanvas {
     this.fCanvas = document.createElement("canvas");
     this.fCtx    = this.fCanvas.getContext("2d");
   }
-
   render(t) {
     const { canvas, ctx } = this;
     const W = canvas.width, H = canvas.height;
     const CX = W / 2, CY = H / 2;
     const R  = Math.min(W, H) * 0.48;
-
     ctx.clearRect(0, 0, W, H);
     this._drawGlow(ctx, CX, CY, R, t);
-
     ctx.save();
     ctx.beginPath();
     ctx.arc(CX, CY, R, 0, Math.PI * 2);
@@ -80,7 +99,6 @@ class SunCanvas {
     this._drawDisc(ctx, CX, CY, R, t);
     ctx.restore();
   }
-
   _buildGranulation(R, t) {
     if (t - this.lastGranTime < 75) return;
     this.lastGranTime = t;
@@ -112,7 +130,6 @@ class SunCanvas {
     }
     this.gCtx.putImageData(img, 0, 0);
   }
-
   _buildFilaments(R, t) {
     const sz = Math.ceil(R * 2 + 4);
     if (this.fCanvas.width !== sz) { this.fCanvas.width = this.fCanvas.height = sz; }
@@ -143,7 +160,6 @@ class SunCanvas {
       this.fCtx.restore();
     }
   }
-
   _drawGlow(ctx, CX, CY, R, t) {
     const pulse = 1 + 0.013 * Math.sin(t * 0.0005);
     const layers = [
@@ -162,7 +178,6 @@ class SunCanvas {
       ctx.fill();
     }
   }
-
   _drawDisc(ctx, CX, CY, R, t) {
     this._buildGranulation(R, t);
     this._buildFilaments(R, t);
@@ -195,7 +210,6 @@ class SunCanvas {
 // ── Instantiate suns ──────────────────────────────────────────────────────────
 const btnCanvas     = document.getElementById("sunButtonCanvas");
 const overlayCanvas = document.getElementById("sunOverlayCanvas");
-
 const btnSun     = btnCanvas     ? new SunCanvas(btnCanvas)     : null;
 const overlaySun = overlayCanvas ? new SunCanvas(overlayCanvas) : null;
 
