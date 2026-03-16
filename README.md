@@ -2,7 +2,6 @@
 * https://iusmusic.github.io/O
 
 ![OPreview](OMAIN.png)
-![OPreview](OSTA.png)
 
 
 # O
