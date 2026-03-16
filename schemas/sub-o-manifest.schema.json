@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sub O Manifest",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "repo_identity",
+    "template",
+    "agent_mode",
+    "network_mode",
+    "runtime_class"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "repo_identity": { "type": "boolean", "const": true },
+    "template": { "type": "string" },
+    "agent_mode": {
+      "type": "string",
+      "enum": ["local_only", "online_brokered", "hybrid", "manual_only"]
+    },
+    "network_mode": {
+      "type": "string",
+      "enum": ["offline", "broker_only", "allowlist", "lan_only", "full"]
+    },
+    "runtime_class": {
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": ["native", "compat", "vm"]
+        },
+        {
+          "type": "object",
+          "required": ["mode"],
+          "properties": {
+            "mode": {
+              "type": "string",
+              "enum": ["native", "compat", "vm", "mixed"]
+            },
+            "mixed_modes_allowed": { "type": "boolean" }
+          },
+          "additionalProperties": true
+        }
+      ]
+    },
+    "permissions": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "device_policy": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "mapping_policy": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "promotion_state": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "snapshot_policy": {
+      "type": "string",
+      "enum": ["manual", "periodic", "on_change", "disabled"]
+    },
+    "destruction_policy": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "allowed_service_targets": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "shared_resources": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": true
+}
