@@ -1,39 +1,51 @@
-![OPreview](OMAIN.png)
+[OPreview](OMAIN.png)
 ![OPreview](OSUB.png)
+
 **Live demo**  
 * https://iusmusic.github.io/O
 
-# O (OS)
+# O
 
-**O is a full independent operating system with a protected Mother O core, sandboxed Sub O environments, machine-native internal languages for software, graphics, and music, a visible privacy/security model, signed and rollback-safe system evolution, repo-driven device support, and optional external hardware expansion for AI, audio, display, and compute.**
+O is a full independent smartphone and tablet operating system built around a protected Mother O core, sandboxed Sub O environments, and machine-native internal languages for software, graphics, and music.
 
+## Purpose
 
-## Core principles
+O exists to enable freedom through safe, transparent, and programmable computing.
 
-- Mother O is protected and mostly immutable in logic.
-- Sub O is the safe place for experimentation, live coding, and development.
-- O uses machine-native internal languages: O-IR, O-GFX, and O-MUS.
-- Local-first AI is the default; online AI is brokered and optional.
-- Every meaningful action should be visible, reversible, and policy-governed.
-- Device support is repo-driven and starts with a single proof-of-concept target.
+It is designed for people who want to:
+- build tools directly on their device
+- use local or brokered AI to create software
+- inspect what the system is doing
+- experiment safely inside isolated worlds
+- own and evolve their computing environment without giving up recovery and control
 
-## Initial target
+## Core laws
 
-- Reference device: Pixel 8-class unlocked retail phone
-- First phase: phone proof of concept
-- Second phase: tablet and PC variants
-- Third phase: purpose-built hardware
+1. O is a full independent operating system.
+2. Mother O is protected.
+3. Sub O is the place for experimentation.
+4. O is installable as the only OS on supported devices.
+5. Local AI is the default mode.
+6. Online AI is optional and brokered by default.
+7. No Sub O can access Mother O files, memory, or secrets without explicit gateways.
+8. Promotion to Main O is staged, validated, and rollback-safe.
+9. All meaningful changes should be visible, auditable, and reversible.
+10. O is designed first for programmers, AI users, and technical builders.
 
-## Status
+## System model
 
-This package is a design baseline, not a final implementation.
+- **Mother O**: the protected flagship environment, full OS surface, control plane, and trust root.
+- **Sub O**: repo-backed isolated programmable worlds for experimentation, development, alternate environments, and service relationships.
+- **The Library**: O’s layered memory and evolution system for software, graphics, music, templates, worlds, and trusted reusable objects.
+- **O-IR**: machine-native software representation.
+- **O-GFX**: machine-native graphics representation.
+- **O-MUS**: machine-native music representation.
 
-# O OS
+## Reference device
 
-O OS is a modular operating system concept built around a central system layer, **Mother O**, and extensible environments called **Sub O**.
-
-This repository contains the core specification package for the platform, including architecture, security, UI direction, device strategy, roadmap planning, and starter modules for media, graphics, and device bring-up.
-
+- **Reference device**: Google Pixel 8 (unlocked retail model)
+- **Initial delivery**: developer-oriented flashable image
+- **Long-term goal**: controlled normal-user installation path
 ## What this repository includes
 
 - vision and architecture documents
