@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minimal O UI v8</title>
+  <title>O UI Refit</title>
   <link rel="stylesheet" href="./styles.css" />
   <script type="importmap">
   {
@@ -17,7 +17,7 @@
 <body>
   <div class="phone-shell">
     <div class="phone-screen" id="screenRoot">
-      <button class="pull-zone" id="pullZone" aria-label="Open overlay"></button>
+      <button class="pull-zone" id="pullZone" type="button" aria-label="Open overlay"></button>
 
       <header class="top-strip">
         <span>CPU 14%</span>
@@ -27,14 +27,8 @@
       </header>
 
       <section class="terminal-block">
-        <div class="terminal-row terminal-row-main">
-          <span class="prompt">&gt;</span>
-          <span>status --world main · sync local only · 2 alerts</span>
-        </div>
-        <div class="terminal-row terminal-row-sub">
-          <span class="prompt">&gt;</span>
-          <span>LOCAL ONLY · SECURE STATE · NO REMOTE WRITE</span>
-        </div>
+        <div class="terminal-row terminal-row-main"><span class="prompt">&gt;</span><span>status --world main · sync local only · 2 alerts</span></div>
+        <div class="terminal-row terminal-row-sub"><span class="prompt">&gt;</span><span>LOCAL ONLY · SECURE STATE · NO REMOTE WRITE</span></div>
       </section>
 
       <main class="layout">
@@ -75,7 +69,7 @@
             <small class="task-state task-state--red"><i></i>READY</small>
           </div>
 
-          <div class="app-grid app-grid-six">
+          <div class="app-grid-six">
             <div class="thin-frame app-card"><span>Files</span></div>
             <div class="thin-frame app-card"><span>Files</span></div>
             <div class="thin-frame app-card"><span>Ledger</span></div>
@@ -86,25 +80,22 @@
 
           <div class="feed-text">
             <div class="feed-line">Database sync remained local. No remote transfer.</div>
-            <div class="feed-line"><span class="feed-dot feed-dot--white"></span>A new USB audio interface was detected and mapped successfully.</div>
-            <div class="feed-line"><span class="feed-dot feed-dot--white"></span>The Sub O snapshot completed successfully with the latest local state preserved.</div>
-            <div class="feed-line"><span class="feed-dot feed-dot--red"></span>Database sync remained local. No remote transfer.</div>
-            <div class="feed-line"><span class="feed-dot feed-dot--blue"></span>A new USB audio interface was detected and mapped successfully.</div>
-            <div class="feed-line"><span class="feed-dot feed-dot--blue"></span>The Sub O snapshot completed successfully with the latest local state preserved.</div>
+            <div class="feed-line">A new USB audio interface was detected and mapped successfully.</div>
+            <div class="feed-line">The Sub O snapshot completed successfully with the latest local state preserved.</div>
           </div>
         </section>
       </main>
 
-      <button class="floating-main-button" id="mainButton" aria-label="Open overlay" type="button">
-        <img class="button-ring" src="./assets/ui/ring-asset.png" alt="" aria-hidden="true" />
-        <div class="main-button-glb-slot model-slot button-model-slot" id="mainButtonGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
+      <button class="floating-main-button" id="mainButton" type="button" aria-label="Open overlay">
+        <img class="button-ring" src="./assets/ui/bottom-ring.png" alt="" aria-hidden="true" />
+        <div class="button-model-slot model-slot" id="mainButtonGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
       </button>
 
       <section class="system-overlay" id="systemOverlay" aria-hidden="true">
         <div class="overlay-panel">
-          <button class="overlay-close-button" id="overlayCloseButton" aria-label="Close overlay" type="button">×</button>
+          <button class="overlay-close-button" id="overlayCloseButton" type="button" aria-label="Close overlay">×</button>
           <div class="overlay-model-wrap">
-            <div class="overlay-glb-slot model-slot overlay-model-slot" id="overlayGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
+            <div class="overlay-model-slot model-slot" id="overlayGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
           </div>
           <div class="overlay-status">
             <div><span>Main Agent</span><b>main-core</b></div>
