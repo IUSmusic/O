@@ -1,7 +1,7 @@
-[OPreview](OMAIN.png)
+![OPreview](OMAIN.png)
 ![OPreview](OSUB.png)
 
-**Live demo**  
+**Demo**  
 * https://iusmusic.github.io/O
 
 # O
