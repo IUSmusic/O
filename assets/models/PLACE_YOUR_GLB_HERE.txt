@@ -1,1 +1,0 @@
-Place your GLB file in this folder and name it: main-button.glb
