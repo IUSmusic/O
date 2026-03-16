@@ -3,21 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>O UI Refit</title>
+  <title>Official O UI</title>
   <link rel="stylesheet" href="./styles.css" />
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
-      "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
-    }
-  }
-  </script>
 </head>
 <body>
   <div class="phone-shell">
     <div class="phone-screen" id="screenRoot">
-      <button class="pull-zone" id="pullZone" type="button" aria-label="Open overlay"></button>
+      <button class="pull-zone" id="pullZone" aria-label="Open overlay"></button>
 
       <header class="top-strip">
         <span>CPU 14%</span>
@@ -27,12 +19,14 @@
       </header>
 
       <section class="terminal-block">
-        <div class="terminal-row terminal-row-main"><span class="prompt">&gt;</span><span>status --world main · sync local only · 2 alerts</span></div>
-        <div class="terminal-row terminal-row-sub"><span class="prompt">&gt;</span><span>LOCAL ONLY · SECURE STATE · NO REMOTE WRITE</span></div>
+        <div class="terminal-row terminal-row-main">
+          <span class="prompt">&gt;</span>
+          <span>status --world main · sync local only · 2 alerts</span>
+        </div>
       </section>
 
       <main class="layout">
-        <section class="icon-column">
+        <section class="icon-column" aria-hidden="true">
           <button class="icon-frame"><span class="shape square"></span></button>
           <button class="icon-frame"><span class="shape circle"></span></button>
           <button class="icon-frame"><span class="shape rounded"></span></button>
@@ -43,16 +37,18 @@
           <button class="icon-frame"><span class="shape circle"></span></button>
           <button class="icon-frame"><span class="shape rounded"></span></button>
           <button class="icon-frame"><span class="shape square"></span></button>
+          <button class="icon-frame"><span class="shape rounded"></span></button>
+          <button class="icon-frame"><span class="shape square"></span></button>
+          <button class="icon-frame"><span class="shape circle"></span></button>
+          <button class="icon-frame"><span class="shape rounded"></span></button>
+          <button class="icon-frame"><span class="shape square"></span></button>
+          <button class="icon-frame"><span class="shape rounded"></span></button>
           <button class="icon-frame"><span class="shape circle"></span></button>
           <button class="icon-frame"><span class="shape rounded"></span></button>
           <button class="icon-frame"><span class="shape square"></span></button>
           <button class="icon-frame"><span class="shape circle"></span></button>
           <button class="icon-frame"><span class="shape rounded"></span></button>
           <button class="icon-frame"><span class="shape square"></span></button>
-          <button class="icon-frame"><span class="shape circle"></span></button>
-          <button class="icon-frame"><span class="shape rounded"></span></button>
-          <button class="icon-frame"><span class="shape square"></span></button>
-          <button class="icon-frame"><span class="shape circle"></span></button>
         </section>
 
         <section class="main-column">
@@ -66,10 +62,10 @@
           </div>
           <div class="line-item">
             <span>Graphics O</span>
-            <small class="task-state task-state--red"><i></i>READY</small>
+            <small class="task-state task-state--yellow"><i></i>READY</small>
           </div>
 
-          <div class="app-grid-six">
+          <div class="app-grid app-grid-six">
             <div class="thin-frame app-card"><span>Files</span></div>
             <div class="thin-frame app-card"><span>Files</span></div>
             <div class="thin-frame app-card"><span>Ledger</span></div>
@@ -79,24 +75,24 @@
           </div>
 
           <div class="feed-text">
-            <div class="feed-line">Database sync remained local. No remote transfer.</div>
-            <div class="feed-line">A new USB audio interface was detected and mapped successfully.</div>
-            <div class="feed-line">The Sub O snapshot completed successfully with the latest local state preserved.</div>
+            <div class="feed-line feed-line--plain">Database sync remained local. No remote transfer.</div>
+            <div class="feed-line"><span class="feed-dot feed-dot--white"></span>A new USB audio interface was detected and mapped successfully.</div>
+            <div class="feed-line"><span class="feed-dot feed-dot--white"></span>The Sub O snapshot completed successfully with the latest local state preserved.</div>
+            <div class="feed-line"><span class="feed-dot feed-dot--red"></span>Database sync remained local. No remote transfer.</div>
+            <div class="feed-line"><span class="feed-dot feed-dot--blue"></span>A new USB audio interface was detected and mapped successfully.</div>
+            <div class="feed-line"><span class="feed-dot feed-dot--blue"></span>The Sub O snapshot completed successfully with the latest local state preserved.</div>
           </div>
         </section>
       </main>
 
-      <button class="floating-main-button" id="mainButton" type="button" aria-label="Open overlay">
-        <img class="button-ring" src="./assets/ui/bottom-ring.png" alt="" aria-hidden="true" />
-        <div class="button-model-slot model-slot" id="mainButtonGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
+      <button class="floating-main-button" id="mainButton" aria-label="Open overlay" type="button">
+        <span class="moon-button-core" aria-hidden="true"></span>
       </button>
 
       <section class="system-overlay" id="systemOverlay" aria-hidden="true">
         <div class="overlay-panel">
-          <button class="overlay-close-button" id="overlayCloseButton" type="button" aria-label="Close overlay">×</button>
-          <div class="overlay-model-wrap">
-            <div class="overlay-model-slot model-slot" id="overlayGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
-          </div>
+          <button class="overlay-close-button" id="overlayCloseButton" aria-label="Close overlay" type="button">×</button>
+          <div class="overlay-orb" aria-hidden="true"></div>
           <div class="overlay-status">
             <div><span>Main Agent</span><b>main-core</b></div>
             <div><span>API</span><b>127.0.0.1:9090</b></div>
