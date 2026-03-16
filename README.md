@@ -72,7 +72,7 @@ It is not positioned as a complete production OS release.
 ## Featured starter modules
 
 ### O-IR
-Starter specification for infrared or low-level system-facing functionality.
+Starter specification for machine-native software representation.
 
 ### O-GFX
 Starter specification for graphics-related services, rendering, or visual pipeline work.
