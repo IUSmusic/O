@@ -3,120 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Minimal O UI v8</title>
+  <title>O Main UI Preview</title>
   <link rel="stylesheet" href="./styles.css" />
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
-      "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
-    }
-  }
-  </script>
 </head>
 <body>
-  <div class="phone-shell">
-    <div class="phone-screen" id="screenRoot">
-      <button class="pull-zone" id="pullZone" aria-label="Open overlay"></button>
+  <div class="stage">
+    <div class="phone">
+      <div class="screen" id="screenRoot">
+        <div class="notch"></div>
+        <button class="pull-zone" id="pullZone" aria-label="Open system overlay"></button>
 
-      <header class="top-strip">
-        <span>CPU 14%</span>
-        <span>GPU 5%</span>
-        <span>LOCAL AGENT READY</span>
-        <span>85%</span>
-      </header>
-
-      <section class="terminal-block">
-        <div class="terminal-row terminal-row-main">
-          <span class="prompt">&gt;</span>
-          <span>status --world main · sync local only · 2 alerts</span>
+        <!-- STATUS BAR -->
+        <div class="statusbar" id="statusBar">
+          <span class="s-item">CPU <b>14%</b></span>
+          <span class="s-item">GPU <b>5%</b></span>
+          <span class="s-item s-agent">LOCAL AGENT READY</span>
+          <span class="s-item s-batt"><b>85%</b></span>
         </div>
-        <div class="terminal-row terminal-row-sub">
-          <span class="prompt">&gt;</span>
-          <span>LOCAL ONLY · SECURE STATE · NO REMOTE WRITE</span>
-        </div>
-      </section>
 
-      <main class="layout">
-        <section class="icon-column">
-          <button class="icon-frame"><span class="shape square"></span></button>
-          <button class="icon-frame"><span class="shape circle"></span></button>
-          <button class="icon-frame"><span class="shape rounded"></span></button>
-          <button class="icon-frame"><span class="shape square"></span></button>
-          <button class="icon-frame"><span class="shape circle"></span></button>
-          <button class="icon-frame"><span class="shape rounded"></span></button>
-          <button class="icon-frame"><span class="shape square"></span></button>
-          <button class="icon-frame"><span class="shape circle"></span></button>
-          <button class="icon-frame"><span class="shape rounded"></span></button>
-          <button class="icon-frame"><span class="shape square"></span></button>
-          <button class="icon-frame"><span class="shape circle"></span></button>
-          <button class="icon-frame"><span class="shape rounded"></span></button>
-          <button class="icon-frame"><span class="shape square"></span></button>
-          <button class="icon-frame"><span class="shape circle"></span></button>
-          <button class="icon-frame"><span class="shape rounded"></span></button>
-          <button class="icon-frame"><span class="shape square"></span></button>
-          <button class="icon-frame"><span class="shape circle"></span></button>
-          <button class="icon-frame"><span class="shape rounded"></span></button>
-          <button class="icon-frame"><span class="shape square"></span></button>
-          <button class="icon-frame"><span class="shape circle"></span></button>
+        <!-- TERMINAL -->
+        <section class="terminal">
+          <div class="terminal-body">
+            <span class="t-caret">&gt;</span>
+            <span class="t-cmd"> status --world main</span>
+            <span class="t-sep"> · </span>
+            <span class="t-dim">sync local only · 2 alerts</span>
+          </div>
         </section>
 
-        <section class="main-column">
-          <div class="line-item">
-            <span>Dev Lab</span>
-            <small class="task-state task-state--blue"><i></i>LIVE</small>
-          </div>
-          <div class="line-item">
-            <span>Music O</span>
-            <small class="task-state task-state--white"><i></i>RENDER</small>
-          </div>
-          <div class="line-item">
-            <span>Graphics O</span>
-            <small class="task-state task-state--red"><i></i>READY</small>
-          </div>
+        <div class="h-divider"></div>
 
-          <div class="app-grid app-grid-six">
-            <div class="thin-frame app-card"><span>Files</span></div>
-            <div class="thin-frame app-card"><span>Files</span></div>
-            <div class="thin-frame app-card"><span>Ledger</span></div>
-            <div class="thin-frame app-card"><span>Studio</span></div>
-            <div class="thin-frame app-card"><span>Studio</span></div>
-            <div class="thin-frame app-card"><span>Shield</span></div>
-          </div>
+        <!-- MAIN AREA -->
+        <main class="main">
 
-          <div class="feed-text">
-            <div class="feed-line">Database sync remained local. No remote transfer.</div>
-            <div class="feed-line"><span class="feed-dot feed-dot--white"></span>A new USB audio interface was detected and mapped successfully.</div>
-            <div class="feed-line"><span class="feed-dot feed-dot--white"></span>The Sub O snapshot completed successfully with the latest local state preserved.</div>
-            <div class="feed-line"><span class="feed-dot feed-dot--red"></span>Database sync remained local. No remote transfer.</div>
-            <div class="feed-line"><span class="feed-dot feed-dot--blue"></span>A new USB audio interface was detected and mapped successfully.</div>
-            <div class="feed-line"><span class="feed-dot feed-dot--blue"></span>The Sub O snapshot completed successfully with the latest local state preserved.</div>
+          <!-- LEFT: ICON GRID -->
+          <section class="grid-panel">
+            <div class="icon-grid">
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph ci"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph ci"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph ci"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph ci"></div></div>
+              <div class="slot"><div class="glyph sq rnd"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph ci"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph ci"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph ci"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+              <div class="slot"><div class="glyph sq"></div></div>
+            </div>
+          </section>
+
+          <!-- RIGHT COLUMN -->
+          <section class="right-column">
+
+            <!-- SUB-O LIST -->
+            <section class="subo-list">
+              <div class="chip">
+                <span class="chip-name">Dev Lab</span>
+                <small class="chip-status"><span class="dot dot-blue"></span>LIVE</small>
+              </div>
+              <div class="chip">
+                <span class="chip-name">Music O</span>
+                <small class="chip-status"><span class="dot dot-white"></span>RENDER</small>
+              </div>
+              <div class="chip">
+                <span class="chip-name">Graphics O</span>
+                <small class="chip-status"><span class="dot dot-yellow"></span>READY</small>
+              </div>
+            </section>
+
+            <!-- PINNED APPS 3x2 -->
+            <section class="pinned-apps">
+              <div class="pinned-grid">
+                <div class="app-tile"><span>Files</span></div>
+                <div class="app-tile"><span>Files</span></div>
+                <div class="app-tile"><span>Ledger</span></div>
+                <div class="app-tile"><span>Studio</span></div>
+                <div class="app-tile"><span>Studio</span></div>
+                <div class="app-tile"><span>Shield</span></div>
+              </div>
+            </section>
+
+            <!-- SYSTEM FEED -->
+            <section class="system-feed">
+              <p class="feed-plain">Database sync remained local. No remote transfer.</p>
+              <div class="feed-item"><span class="dot dot-white"></span><span>A new USB audio interface was detected and mapped successfully.</span></div>
+              <div class="feed-item"><span class="dot dot-white dot-dim"></span><span>The Sub O snapshot completed successfully with the latest local state preserved.</span></div>
+              <div class="feed-item"><span class="dot dot-red"></span><span>Database sync remained local. No remote transfer.</span></div>
+              <div class="feed-item"><span class="dot dot-blue"></span><span>A new USB audio interface was detected and mapped successfully.</span></div>
+              <div class="feed-item"><span class="dot dot-blue dot-dim"></span><span>The Sub O snapshot completed successfully with the latest local state preserved.</span></div>
+            </section>
+
+          </section>
+        </main>
+
+        <!-- 3D FLOATING BUTTON — untouched, linked to main.js -->
+        <button class="floating-main-button" aria-label="Main button">
+          <div class="main-button-inner">
+            <div class="main-button-glb-slot model-slot" id="mainButtonGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
+          </div>
+        </button>
+
+        <!-- SYSTEM OVERLAY — untouched, linked to main.js -->
+        <section class="system-overlay" id="systemOverlay" aria-hidden="true">
+          <div class="system-overlay-panel">
+            <button class="overlay-close-button" id="overlayCloseButton" aria-label="Return to home">O</button>
+            <div class="overlay-centerpiece">
+              <div class="overlay-glb-slot model-slot overlay-model-slot" id="overlayGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
+            </div>
           </div>
         </section>
-      </main>
 
-      <button class="floating-main-button" id="mainButton" aria-label="Open overlay" type="button">
-        <img class="button-ring" src="./assets/ui/ring-asset.png" alt="" aria-hidden="true" />
-        <div class="main-button-glb-slot model-slot button-model-slot" id="mainButtonGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
-      </button>
-
-      <section class="system-overlay" id="systemOverlay" aria-hidden="true">
-        <div class="overlay-panel">
-          <button class="overlay-close-button" id="overlayCloseButton" aria-label="Close overlay" type="button">×</button>
-          <div class="overlay-model-wrap">
-            <div class="overlay-glb-slot model-slot overlay-model-slot" id="overlayGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
-          </div>
-          <div class="overlay-status">
-            <div><span>Main Agent</span><b>main-core</b></div>
-            <div><span>API</span><b>127.0.0.1:9090</b></div>
-            <div><span>Local</span><b>localhost</b></div>
-            <div><span>Status</span><b><small class="task-state task-state--red"><i></i>ACTIVE</small></b></div>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   </div>
 
-  <script type="module" src="./js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 </html>
