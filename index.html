@@ -21,13 +21,16 @@
           <span class="s-item s-batt"><b>85%</b></span>
         </div>
 
-        <!-- TERMINAL -->
-        <section class="terminal">
-          <div class="terminal-body">
-            <span class="t-caret">&gt;</span>
-            <span class="t-cmd"> status --world main</span>
-            <span class="t-sep"> · </span>
-            <span class="t-dim">sync local only · 2 alerts</span>
+        <!-- TERMINAL — click to expand -->
+        <section class="terminal" id="terminalSection">
+          <div class="terminal-body" id="terminalToggle" role="button" tabindex="0" aria-label="Open terminal">
+            <div class="t-line-primary">
+              <span class="t-caret">$</span>
+              <span class="t-cmd">agent run --core main --sync local</span>
+            </div>
+            <div class="t-line-secondary">
+              <span class="t-dim">↳ 3 tasks queued · mem 1.2 GB · uptime 4h 32m</span>
+            </div>
           </div>
         </section>
 
@@ -35,7 +38,6 @@
 
         <!-- MAIN AREA -->
         <main class="main">
-
           <!-- LEFT: ICON GRID -->
           <section class="grid-panel">
             <div class="icon-grid">
@@ -66,7 +68,6 @@
 
           <!-- RIGHT COLUMN -->
           <section class="right-column">
-
             <!-- SUB-O LIST -->
             <section class="subo-list">
               <div class="chip">
@@ -104,7 +105,6 @@
               <div class="feed-item"><span class="dot dot-blue"></span><span>A new USB audio interface was detected and mapped successfully.</span></div>
               <div class="feed-item"><span class="dot dot-blue dot-dim"></span><span>The Sub O snapshot completed successfully with the latest local state preserved.</span></div>
             </section>
-
           </section>
         </main>
 
@@ -122,13 +122,58 @@
             <div class="overlay-centerpiece">
               <canvas id="sunOverlayCanvas" aria-hidden="true"></canvas>
             </div>
+            <!-- INFO ROWS -->
+            <div class="overlay-info">
+              <div class="overlay-row">
+                <span class="overlay-label">Main Agent</span>
+                <span class="overlay-value">main-core</span>
+              </div>
+              <div class="overlay-row">
+                <span class="overlay-label">API</span>
+                <span class="overlay-value">127.0.0.1:9090</span>
+              </div>
+              <div class="overlay-row">
+                <span class="overlay-label">Local</span>
+                <span class="overlay-value">localhost</span>
+              </div>
+              <div class="overlay-row">
+                <span class="overlay-label">Status</span>
+                <span class="overlay-value overlay-value-online">
+                  <span class="dot dot-red"></span>Online
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TERMINAL FULL-PAGE OVERLAY -->
+        <section class="terminal-overlay" id="terminalOverlay" aria-hidden="true">
+          <div class="terminal-overlay-panel">
+            <div class="tov-header">
+              <span class="tov-title">terminal <span class="tov-pid">— pid 1847</span></span>
+              <button class="tov-close" id="terminalOverlayClose" aria-label="Close terminal">✕</button>
+            </div>
+            <div class="tov-body" id="tovBody">
+              <div class="tov-line"><span class="tov-ts">04:32:01</span><span class="tov-ok">[OK]</span><span> agent core initialised · main-core v2.1.4</span></div>
+              <div class="tov-line"><span class="tov-ts">04:32:01</span><span class="tov-ok">[OK]</span><span> local bus bound → 127.0.0.1:9090</span></div>
+              <div class="tov-line"><span class="tov-ts">04:32:02</span><span class="tov-info">[--]</span><span> scanning sub-agents…</span></div>
+              <div class="tov-line"><span class="tov-ts">04:32:02</span><span class="tov-ok">[OK]</span><span> Dev Lab attached · status LIVE</span></div>
+              <div class="tov-line"><span class="tov-ts">04:32:03</span><span class="tov-ok">[OK]</span><span> Music O attached · status RENDER</span></div>
+              <div class="tov-line"><span class="tov-ts">04:32:03</span><span class="tov-warn">[!]</span><span> Graphics O idle — awaiting task dispatch</span></div>
+              <div class="tov-line"><span class="tov-ts">04:32:04</span><span class="tov-info">[--]</span><span> mem 1.2 GB / 8 GB · cpu 14% · gpu 5%</span></div>
+              <div class="tov-line"><span class="tov-ts">04:32:05</span><span class="tov-warn">[!]</span><span> db sync skipped — remote unreachable, local only</span></div>
+              <div class="tov-line"><span class="tov-ts">04:32:06</span><span class="tov-ok">[OK]</span><span> USB audio interface detected → /dev/snd/pcmC1D0c</span></div>
+              <div class="tov-line"><span class="tov-ts">04:32:07</span><span class="tov-ok">[OK]</span><span> snapshot saved · hash a3f9c12</span></div>
+              <div class="tov-line"><span class="tov-ts">04:32:08</span><span class="tov-err">[✗]</span><span> remote sync failed — 2 alerts pending</span></div>
+              <div class="tov-line"><span class="tov-ts">04:32:09</span><span class="tov-info">[--]</span><span> watchdog active · interval 30s</span></div>
+              <div class="tov-line tov-prompt"><span class="tov-caret">$</span><span class="tov-input">agent run --core main --sync local</span><span class="tov-cursor">█</span></div>
+            </div>
           </div>
         </section>
 
       </div>
     </div>
   </div>
-
   <script src="./js/main.js"></script>
 </body>
 </html>
