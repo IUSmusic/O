@@ -368,7 +368,20 @@ body {
   text-indent: .22em;
 }
 
-.model-slot.has-model::after { content: ""; }
+.model-slot.has-model::before,
+.model-slot.has-model::after {
+  content: none;
+}
+
+.model-slot canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  z-index: 1;
+}
+
 
 /* ───── SYSTEM OVERLAY (untouched) ───── */
 .system-overlay {
