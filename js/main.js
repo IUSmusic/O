@@ -104,7 +104,7 @@ class SunCanvas {
         const g01  = (gran + 1) * 0.5;
         const heat = g01 * limb;
         const v    = heat < 0.5 ? 2 * heat * heat : 1 - Math.pow(-2 * heat + 2, 2) / 2;
-        const bv   = Math.min(255, (v * 255) | 0);
+        const bv   = Math.min(255, (Math.pow(v, 1.75) * 180) | 0);
         const i    = (py * sz + px) * 4;
         d[i] = d[i + 1] = d[i + 2] = bv;
         d[i + 3] = 255;
@@ -147,10 +147,10 @@ class SunCanvas {
   _drawGlow(ctx, CX, CY, R, t) {
     const pulse = 1 + 0.013 * Math.sin(t * 0.0005);
     const layers = [
-      { r: R * 3.8 * pulse, a1: 0.035 },
-      { r: R * 2.6 * pulse, a1: 0.070 },
-      { r: R * 1.8 * pulse, a1: 0.140 },
-      { r: R * 1.35 * pulse, a1: 0.240 },
+      { r: R * 3.8 * pulse, a1: 0.070 },
+      { r: R * 2.6 * pulse, a1: 0.140 },
+      { r: R * 1.8 * pulse, a1: 0.280 },
+      { r: R * 1.35 * pulse, a1: 0.480 },
     ];
     for (const l of layers) {
       const g = ctx.createRadialGradient(CX, CY, R * 0.96, CX, CY, l.r);
@@ -180,12 +180,13 @@ class SunCanvas {
     ctx.arc(CX, CY, R, 0, Math.PI * 2);
     ctx.fillStyle = vign;
     ctx.fill();
-    const bloom = ctx.createRadialGradient(CX, CY, 0, CX, CY, R * 0.45);
-    bloom.addColorStop(0,    "rgba(255,255,255,0.22)");
-    bloom.addColorStop(0.45, "rgba(255,255,255,0.04)");
+    const bloom = ctx.createRadialGradient(CX, CY, 0, CX, CY, R * 0.60);
+    bloom.addColorStop(0,    "rgba(255,255,255,0.72)");
+    bloom.addColorStop(0.30, "rgba(255,255,255,0.28)");
+    bloom.addColorStop(0.65, "rgba(255,255,255,0.06)");
     bloom.addColorStop(1,    "rgba(255,255,255,0.00)");
     ctx.beginPath();
-    ctx.arc(CX, CY, R * 0.45, 0, Math.PI * 2);
+    ctx.arc(CX, CY, R * 0.60, 0, Math.PI * 2);
     ctx.fillStyle = bloom;
     ctx.fill();
   }
