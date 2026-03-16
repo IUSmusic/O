@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal O UI</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.161.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.161.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="phone-shell">
+    <div class="phone-screen" id="screenRoot">
+      <button class="pull-zone" id="pullZone" aria-label="Open overlay"></button>
+
+      <header class="top-strip">
+        <span>CPU 14%</span>
+        <span>GPU 5%</span>
+        <span>LOCAL AGENT READY</span>
+        <span>85%</span>
+      </header>
+
+      <section class="terminal-line">
+        <div>> status --world main · sync local only · 2 alerts</div>
+      </section>
+
+      <main class="layout">
+        <section class="icon-column">
+          <button class="icon-frame"><span class="shape square"></span></button>
+          <button class="icon-frame"><span class="shape circle"></span></button>
+          <button class="icon-frame"><span class="shape rounded"></span></button>
+          <button class="icon-frame"><span class="shape square"></span></button>
+          <button class="icon-frame"><span class="shape circle"></span></button>
+          <button class="icon-frame"><span class="shape rounded"></span></button>
+          <button class="icon-frame"><span class="shape square"></span></button>
+          <button class="icon-frame"><span class="shape circle"></span></button>
+          <button class="icon-frame"><span class="shape rounded"></span></button>
+          <button class="icon-frame"><span class="shape square"></span></button>
+          <button class="icon-frame"><span class="shape circle"></span></button>
+          <button class="icon-frame"><span class="shape rounded"></span></button>
+        </section>
+
+        <section class="main-column">
+          <div class="line-item"><span>Dev Lab</span><small>live</small></div>
+          <div class="line-item"><span>Music O</span><small>render</small></div>
+          <div class="line-item"><span>Graphics O</span><small>ready</small></div>
+
+          <div class="app-grid">
+            <div class="thin-frame app-card"><span>Files</span></div>
+            <div class="thin-frame app-card"><span>Ledger</span></div>
+            <div class="thin-frame app-card"><span>Studio</span></div>
+            <div class="thin-frame app-card"><span>Shield</span></div>
+          </div>
+
+          <div class="feed-text">
+            Database sync remained local. No remote transfer.<br><br>
+            A new USB audio interface was detected and mapped successfully.<br><br>
+            The Sub O snapshot completed successfully with the latest local state preserved.
+          </div>
+        </section>
+      </main>
+
+      <button class="floating-main-button" id="mainButton" aria-label="Open overlay">
+        <div class="main-button-glb-slot model-slot" id="mainButtonGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
+      </button>
+
+      <section class="system-overlay" id="systemOverlay" aria-hidden="true">
+        <div class="overlay-panel">
+          <button class="overlay-close-button" id="overlayCloseButton" aria-label="Close overlay">×</button>
+          <div class="overlay-model-wrap thin-frame">
+            <div class="overlay-glb-slot model-slot overlay-model-slot" id="overlayGlbSlot" data-model-path="./assets/models/main-button.glb"></div>
+          </div>
+          <div class="overlay-status">
+            <div><span>Main Agent</span><b>main-core</b></div>
+            <div><span>API</span><b>127.0.0.1:9090</b></div>
+            <div><span>Local</span><b>localhost</b></div>
+            <div><span>Status</span><b>Online</b></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
