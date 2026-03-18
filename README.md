@@ -284,10 +284,3 @@ If this repository is hosted publicly on GitHub, GitHub users may have certain l
 <a href="LICENSE">
   <img src="images/license-badge.png" alt="License badge" width="70">
 </a>
-
-
-
-
-<a href="LICENSE">
-  <img src="images/license-badge.png" alt="License badge" width="70">
-</a>
