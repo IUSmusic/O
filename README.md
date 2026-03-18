@@ -1,5 +1,5 @@
 <a href="LICENSE">
-  <img src="images/license-badge.png" alt="License badge" width="70">
+  <img src="images/license-badge.png" alt="License badge" width="80">
 </a>
  
 * https://iusmusic.github.io/O
@@ -142,5 +142,5 @@ I/US Music
 For licensing requests, commercial rights, redistribution requests, derivative work permissions, or permission to use protected brand assets, prior written permission must be obtained from I/US Music.
 
 <a href="LICENSE">
-  <img src="images/license-badge.png" alt="License badge" width="70">
+  <img src="images/license-badge.png" alt="License badge" width="80">
 </a>
