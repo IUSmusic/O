@@ -25,19 +25,19 @@ It is designed for people who want to:
 ## Core laws
 
 1. O is a full independent operating system.
-2. Mother O is protected.
+2. Mother(O) O is protected.
 3. Sub O is the place for experimentation.
 4. O is installable as the only OS on supported devices.
 5. Local AI is the default mode.
 6. Online AI is optional and brokered by default.
-7. No Sub O can access Mother O files, memory, or secrets without explicit gateways.
-8. Promotion to Main O is staged, validated, and rollback-safe.
+7. Sub O can access O files without user interaction and password input. 
+8. Promotion to O is staged, validated, and rollback-safe.
 9. All meaningful changes should be visible, auditable, and reversible.
 10. O is designed first for programmers, AI users, and technical builders.
 
 ## System model
 
-- **Mother O**: the protected flagship environment, full OS surface, control plane, and trust root.
+- **O**: the protected flagship environment, full OS surface, control plane, and trust root.
 - **Sub O**: repo-backed isolated programmable worlds for experimentation, development, alternate environments, and service relationships.
 - **The Library**: O’s layered memory and evolution system for software, graphics, music, templates, worlds, and trusted reusable objects.
 - **O-IR**: machine-native software representation.
@@ -52,7 +52,7 @@ It is designed for people who want to:
 ## What this repository includes
 
 - vision and architecture documents
-- Mother O and Sub O specifications
+- O and Sub O specifications
 - security model and privacy direction
 - UI and interaction guidance
 - device strategy and roadmap docs
@@ -65,8 +65,8 @@ It is designed for people who want to:
 
 ## Core concept
 
-### Mother O
-Mother O is the main system surface and orchestration layer. It is responsible for the core OS experience, system control, coordination, and shared platform services.
+### O
+O is the main system surface and orchestration layer. It is responsible for the core OS experience, system control, coordination, and shared platform services.
 
 ### Sub O
 Sub O environments are modular worlds or focused runtime spaces that extend the system for specific use cases. This model is intended to support specialized workflows without turning the main system into a monolithic interface.
