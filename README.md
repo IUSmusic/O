@@ -1,15 +1,13 @@
 <a href="LICENSE">
   <img src="images/license-badge.png" alt="License badge" width="70">
 </a>
-
-
-**Demo**  
+ 
 * https://iusmusic.github.io/O
 
 ![OPreview](OMAIN.png)
 
 
-# O
+## O
 
 O is a full independent smartphone and tablet operating system built around a protected Mother O core, sandboxed Sub O environments, and machine-native internal languages for software, graphics, and music.
 
