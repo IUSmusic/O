@@ -1,3 +1,8 @@
+<a href="LICENSE">
+  <img src="images/license-badge.png" alt="License badge" width="70">
+</a>
+
+
 **Demo**  
 * https://iusmusic.github.io/O
 
@@ -222,3 +227,6 @@ This project is maintained by **Pezhman Farhangi**.
 **Project O source code is licensed under Apache-2.0, while trademarks, UI, Name, identifiers, logos, and protected visual assets are reserved.**
 
 
+<a href="LICENSE">
+  <img src="images/license-badge.png" alt="License badge" width="70">
+</a>
