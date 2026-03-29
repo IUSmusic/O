@@ -5,6 +5,8 @@
 * https://iusmusic.github.io/O
 
 ![OPreview](OMAIN.png)
+![OPreview](okeyboardbg.png)
+![OPreview](okeyboardmodel1.png)
 
 
 ## O
